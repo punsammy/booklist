@@ -2,5 +2,9 @@
 
 <% @books.each do |book|%>
 <br/>
-  <%= book.title %>
+  <p>Title: <%= book.title %></p>
+  <p>Author: <%= book.author %></p>
 <%end %>
+
+
+<%= link_to "Home Page", root_url %>
