@@ -6,6 +6,7 @@ class BooksController < ApplicationController
     respond_to do |format|
       format.html
       format.text
+      format.json { render json: @books }
       format.csv do
         def self.generate_csv(book_list)
           header = ['id', 'title', 'author', 'already_read']
